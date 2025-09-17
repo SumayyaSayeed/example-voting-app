@@ -38,7 +38,7 @@ stages:
         containerRegistry: '$(dockerRegistryServiceConnection)'
         repository: '$(imageRepository)'
         command: 'build'
-        Dockerfile: 'result/Dockerfile'
+        Dockerfile: '$(dockerfilePath)'
         tags: '$(tag)'
 
 - stage: Push
