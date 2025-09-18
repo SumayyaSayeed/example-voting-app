@@ -59,6 +59,7 @@ stages:
         command: 'push'
         tags: '$(tag)'
 
+
 - stage: Update
   displayName: Update
   jobs:
@@ -68,4 +69,7 @@ stages:
        name: 'azureagent'
       steps:
         - task: ShellScript@2
+          inputs:
+           scriptPath: 'Scripts/updatek8manifest.sh'
+           args: 'vote $imageRepository $tag'
         
