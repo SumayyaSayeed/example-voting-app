@@ -3,7 +3,7 @@
 set -x
 
 # Set the repository URL
-REPO_URL="https://github.com/SumayyaSayeed/example-voting-app.git"
+REPO_URL="git@github.com:SumayyaSayeed/example-voting-app.git"
 
 # Clone the git repository into the /tmp directory
 git clone "$REPO_URL" /tmp/temp_repo
