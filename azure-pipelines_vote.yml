@@ -64,6 +64,8 @@ stages:
   jobs:
     - job: update
       displayName: update
+      pool:
+       name: 'azureagent'
       steps:
         - task: ShellScript@2
         
