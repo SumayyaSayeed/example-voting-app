@@ -15,7 +15,7 @@ spec:
         app: vote
     spec:
       containers:
-      - image: votndemo.azurecr.io/votingapp:17
+      - image: dockersamples/examplevotingapp_vote
         name: vote
         ports:
         - containerPort: 80
