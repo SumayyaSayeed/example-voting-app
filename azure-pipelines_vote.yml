@@ -58,3 +58,12 @@ stages:
         repository: '$(imageRepository)'
         command: 'push'
         tags: '$(tag)'
+
+- stage: Update
+  displayName: Update
+  jobs:
+    - job: update
+      displayName: update
+      steps:
+        - task: ShellScript@2
+        
