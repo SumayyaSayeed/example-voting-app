@@ -60,3 +60,15 @@ stages:
         repository: '$(imageRepository)'
         command: 'push'
         tags: '$(tag)'
+- stage: Update
+  displayName: Update
+  jobs:
+    - job: update
+      displayName: update
+      pool:
+       name: 'azureagent'
+      steps:
+        - task: ShellScript@2
+          inputs:
+           scriptPath: 'Scripts/updatek8manifest.sh'
+           args: 'result $(imageRepository) $(tag)'
